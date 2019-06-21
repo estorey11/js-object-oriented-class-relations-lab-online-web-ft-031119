@@ -1,3 +1,5 @@
+let store = { drivers: [], passengers: [], trips: [] };
+
 
 let driverId=0
 class Driver{
@@ -6,7 +8,7 @@ class Driver{
         this.name = name;
  
         // insert in the user to the store
-        //store.users.push(this);
+        store.drivers.push(this);
         return this
     }
 }
@@ -18,7 +20,7 @@ class Passenger{
         this.name = name;
  
         // insert in the user to the store
-        //store.users.push(this);
+        store.passengers.push(this);
         return this
     }
 }
@@ -29,10 +31,10 @@ class Trip{
         this.id = ++tripId;
         this.driverId=driver.id
         this.passengerId=passenger.id
-        
-        return this
         // insert in the user to the store
-        //store.users.push(this);
+        store.trips.push(this);
+        return this
+        
     }
 }
 
