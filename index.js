@@ -11,7 +11,7 @@ class Driver{
 }
 
 let passengerId=0
-class Driver{
+class Passenger{
    constructor(name) {
         this.id = ++driverId;
         this.name = name;
