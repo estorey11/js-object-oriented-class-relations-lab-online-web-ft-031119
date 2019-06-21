@@ -24,9 +24,9 @@ class Passenger{
 }
 
 let tripId=0
-class Driver{
-   constructor(name) {
-        this.id = ++driverId;
+class Trip{
+   constructor(driver, passenger) {
+        this.id = ++tripId;
         this.name = name;
  
         // insert in the user to the store
