@@ -27,8 +27,10 @@ let tripId=0
 class Trip{
    constructor(driver, passenger) {
         this.id = ++tripId;
-        this.name = name;
- 
+        this.driverId=driver.id
+        this.passengerId=passenger.id
+        
+        return this
         // insert in the user to the store
         //store.users.push(this);
     }
