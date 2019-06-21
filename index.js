@@ -22,11 +22,9 @@ class Driver{
     }
     
     passengers() {
-        return store.passengers.filter(
-            function(passenger) {
-                return trip.driverId === this.id;
-            }.bind(this)
-        );
+      return this.trips().map(trip => {
+        return trip.passenger();
+      });
     }
 }
 
