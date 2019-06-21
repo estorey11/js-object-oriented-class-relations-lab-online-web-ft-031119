@@ -21,10 +21,10 @@ class Driver{
         );
     }
     
-    passenger() {
-        return store.passengers.find(
+    passengers() {
+        return store.passengers.filter(
             function(passenger) {
-                return user.id === this.userId;
+                return trip.driverId === this.id;
             }.bind(this)
         );
     }
