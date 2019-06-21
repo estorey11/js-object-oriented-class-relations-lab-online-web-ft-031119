@@ -46,6 +46,12 @@ class Passenger{
             }.bind(this)
         );
     }
+    
+    drivers() {
+      return this.trips().map(trip => {
+        return trip.driver();
+      });
+    }
 }
 
 let tripId=0
