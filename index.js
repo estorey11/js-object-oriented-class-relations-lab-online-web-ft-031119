@@ -6,7 +6,7 @@ class Driver{
         this.name = name;
  
         // insert in the user to the store
-        store.users.push(this);
+        //store.users.push(this);
     }
 }
 
