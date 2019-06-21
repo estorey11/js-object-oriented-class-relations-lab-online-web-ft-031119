@@ -20,6 +20,14 @@ class Driver{
             }.bind(this)
         );
     }
+    
+    passenger() {
+        return store.passengers.find(
+            function(passenger) {
+                return user.id === this.userId;
+            }.bind(this)
+        );
+    }
 }
 
 let passengerId=0
