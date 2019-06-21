@@ -3,6 +3,7 @@ let store = { drivers: [], passengers: [], trips: [] };
 
 let driverId=0
 class Driver{
+  
    constructor(name) {
         this.id = ++driverId;
         this.name = name;
@@ -10,6 +11,14 @@ class Driver{
         // insert in the user to the store
         store.drivers.push(this);
         return this
+    }
+    
+    trips() {
+        return store.trips.filter(
+            function(trip) {
+                return trip.driverId === this.id;
+            }.bind(this)
+        );
     }
 }
 
